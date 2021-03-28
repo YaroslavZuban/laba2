@@ -6,12 +6,12 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Пункт А
-x=np.arange(-10,10,1)
-y=[i**3 for i in x]
-plt.plot(x,y)
+x = np.arange(-10, 10, 1)
+y = [i ** 3 for i in x]
+plt.plot(x, y)
 
 # Пункт B
-print("Решение полинома: ",np.roots([1,0,0]))
+print("Решение полинома: ", np.roots([1, 0, 0]))
 
 # Пункт C
 y = lambda x: numpy.sin(x)

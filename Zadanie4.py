@@ -6,7 +6,7 @@ from numpy.core.function_base import linspace
 # Задание А
 u, v = numpy.mgrid[0:2 * numpy.pi:20j, 0:numpy.pi:10j]
 x = v * u
-y =  u
+y = u
 z = v * u
 fig = matplotlib.pyplot.figure()
 axes = Axes3D(fig)
