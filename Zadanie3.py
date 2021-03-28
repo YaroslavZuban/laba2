@@ -2,17 +2,18 @@
 import numpy
 import matplotlib.pyplot
 from numpy.polynomial import Polynomial as P
+import numpy as np
+import matplotlib.pyplot as plt
 
 # Пункт А
-mass = [1, 4, 4, 3]
-y = lambda x: (mass[3] * x ** 3 + mass[2] * x ** 2 + mass[1] * x + mass[0])
-fig = matplotlib.pyplot.subplots()
-x = numpy.linspace(-3, 3, 100)
-matplotlib.pyplot.plot(x, y(x))
-matplotlib.pyplot.show()
+x = np.linspace(0, 10, 11)
+coeffs = [1, 2, 3, 4, 5]
+y = np.array([np.sum(np.array([coeffs[i]*(j**i) for i in range(len(coeffs))])) for j in x])
+plt.plot(x, y)
+plt.show()
 
 # Пункт B
-p = P(mass)
+p = P(coeffs)
 print("Решение полинома: ", p.roots())
 
 # Пункт C

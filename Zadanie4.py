@@ -5,8 +5,8 @@ from numpy.core.function_base import linspace
 
 # Задание А
 u, v = numpy.mgrid[0:2 * numpy.pi:20j, 0:numpy.pi:10j]
-x = v ** 2 + numpy.sqrt(u)
-y = u ** 2 + numpy.sqrt(v)
+x = v * u
+y =  u
 z = v * u
 fig = matplotlib.pyplot.figure()
 axes = Axes3D(fig)
@@ -26,4 +26,3 @@ fig1 = matplotlib.pyplot.figure()
 ax = Axes3D(fig1)
 ax.plot(x1, y1, z1)
 matplotlib.pyplot.show()
-
