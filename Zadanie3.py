@@ -6,15 +6,12 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Пункт А
-x = np.linspace(0, 10, 11)
-coeffs = [1, 2, 3, 4, 5]
-y = np.array([np.sum(np.array([coeffs[i]*(j**i) for i in range(len(coeffs))])) for j in x])
-plt.plot(x, y)
-plt.show()
+x=np.arange(-10,10,1)
+y=[i**3 for i in x]
+plt.plot(x,y)
 
 # Пункт B
-p = P(coeffs)
-print("Решение полинома: ", p.roots())
+print("Решение полинома: ",np.roots([1,0,0]))
 
 # Пункт C
 y = lambda x: numpy.sin(x)
